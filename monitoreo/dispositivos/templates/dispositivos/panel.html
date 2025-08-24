@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Dispositivos</title>
+</head>
+<body>
+    <h1>Panel de dispositivos</h1>
+    <p>Consumo máximo permitido: {{ consumo_maximo }} W</p>
+    
+    <ul>
+        {% for dispositivo in dispositivos %}
+            <li>
+                {{ dispositivo.nombre }} - {{ dispositivo.consumo }} W - 
+                <strong>{{ dispositivo.estado }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
